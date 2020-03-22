@@ -14,7 +14,7 @@ let quotes = [
   //Winston Churchill Quote
   {
     quote: "There will come a time when you believe everything is finished. That will be the beginning.",
-    author: "Louis L'Amour, Unkown, 2019",    
+    author: "Louis L'Amour, Unkown, 2019",
   },
 ];
 
@@ -24,7 +24,7 @@ let quotes = [
 ***/
 // getRandomQuote function selects and returns a random quote object
 function getRandomQuote() {
-    var quoteIndex = Math.floor(Math.random() * quotes.length);  // selects a random quote
+    let quoteIndex = Math.floor(Math.random() * quotes.length);  // selects a random quote from the array
     return quotes[quoteIndex];  // returns the random quote
 }
 
@@ -33,8 +33,8 @@ function getRandomQuote() {
  * `printQuote` function
 ***/
 function printQuote(message){
-  var result = getRandomQuote(); //Calls and stores the getRandomQuote is a variable
-  var message = "<p class='quote'>" + result.quote + "</p>" +"<p class='source'>" + result.author + "</p>";
+  let result = getRandomQuote(); //Calls and stores the getRandomQuote is a variable
+  let message = "<p class='quote'>" + result.quote + "</p>" +"<p class='source'>" + result.author + "</p>";
    document.getElementById('quote-box').innerHTML = message;
 }
 
